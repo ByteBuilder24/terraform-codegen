@@ -1,0 +1,42 @@
+{
+  "name": "terraform-codegen",
+  "displayName": "terraform-codegen",
+  "description": "",
+  "version": "0.0.1",
+  "main": "./src/extension.ts",
+  "activationEvents": [
+    "onCommand:terraform-codegen.generate"
+  ],
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "go",
+        "aliases": [
+          "go",
+          "go"
+        ],
+        "extensions": [
+          ".go"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "go",
+        "scopeName": "main.go",
+        "path": "./syntaxes/go.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.8",
+    "vscode": "^1.1.37"
+  }
+}
